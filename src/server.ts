@@ -4,6 +4,7 @@ import { migration } from './plugins/migration'
 import cors from 'fastify-cors'
 import { shutdown } from './plugins/shutdown'
 import { prisma } from './plugins/prisma'
+import { status } from './plugins/status'
 import { jwt } from './plugins/jwt'
 
 import mercurius from 'mercurius'
@@ -15,6 +16,7 @@ export const createServer = (opts: FastifyServerOptions = {}) => fastify(opts)
   .register(cors)
   .register(shutdown)
   .register(prisma)
+  .register(status)
   .register(jwt)
   .register(mercurius, {
     schema,
