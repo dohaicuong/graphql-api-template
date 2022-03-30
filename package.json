@@ -7,14 +7,10 @@
     "prismix": "npx prismix && prisma format",
     "migrate": "yarn prismix && npx prisma migrate dev",
     "generate": "yarn migrate && npx prisma generate",
-    "dev": "tsnd --transpile-only --no-notify src/index.ts",
-    "build": "tsc",
-    "start": "node dist/src/index.js"
+    "dev": "tsnd --transpile-only --no-notify src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "3.11.1",
-    "aws-lambda": "^1.0.7",
-    "aws-lambda-fastify": "^2.1.2",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.0",
     "fastify": "^3.27.4",
