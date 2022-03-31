@@ -7,6 +7,6 @@ import { VercelRequest, VercelResponse } from '@vercel/node'
 const app = createServer()
 
 export default async (req: VercelRequest, res: VercelResponse) => {
-  await app.ready();
+  await app.ready()
   app.server.emit('request', req, res)
 }

@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "prismix": "npx prismix && prisma format",
-    "migrate": "yarn prismix && npx prisma migrate dev",
-    "generate": "yarn migrate && npx prisma generate",
+    "migrate": "npx prisma db push",
+    "generate": "npx prisma generate",
     "dev": "tsnd --transpile-only --no-notify src/index.ts"
   },
   "dependencies": {
