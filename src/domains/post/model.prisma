@@ -4,6 +4,8 @@ model Post {
   content  String
   author   User   @relation(fields: [authorId], references: [id])
   authorId String
+
+  @@index(authorId)
 }
 
 model User {

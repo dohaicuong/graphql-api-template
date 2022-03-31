@@ -5,14 +5,13 @@
   "license": "MIT",
   "scripts": {
     "prismix": "npx prismix && prisma format",
-    "migrate": "yarn prismix && npx prisma migrate dev",
-    "generate": "yarn migrate && npx prisma generate",
-    "dev": "tsnd --transpile-only --no-notify src/index.ts",
-    "build": "tsc",
-    "start": "node dist/src/index.js"
+    "migrate": "npx prisma db push",
+    "generate": "npx prisma generate",
+    "dev": "tsnd --transpile-only --no-notify src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "3.11.1",
+    "@vercel/node": "^1.14.0",
     "bcrypt": "^5.0.1",
     "dotenv": "^16.0.0",
     "fastify": "^3.27.4",
