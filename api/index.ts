@@ -1,6 +1,3 @@
-import dotenv from 'dotenv'
-dotenv.config()
-
 import { createServer } from '../src/server'
 import { VercelRequest, VercelResponse } from '@vercel/node'
 
