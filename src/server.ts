@@ -21,7 +21,7 @@ export const createServer = (opts: FastifyServerOptions = {}) => fastify(opts)
   .register(mercurius, {
     schema,
     context: createContext,
-    path: '/graphql',
+    path: '/',
     graphiql: true,
   })
 
