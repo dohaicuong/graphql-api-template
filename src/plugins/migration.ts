@@ -1,14 +1,12 @@
 import fp from 'fastify-plugin'
 import { FastifyPluginAsync } from 'fastify'
-import { execFile } from 'child_process'
-import path from 'path'
+import { exec } from 'child_process'
 
 export const migration: FastifyPluginAsync = fp(async (server, options) => {
   server.addHook('onReady', async () => {
     const [code, message] = await new Promise((resolve, _) => {
-      execFile(
-        path.resolve('./node_modules/prisma/build/index.js'),
-        ['db', 'push', '--schema', path.resolve('./prisma/schema.prisma')],
+      exec(
+        'npx prisma db push',
         (error, stdout, stderr) => {
           server.log.info(stdout)
           if (error === null) return resolve([0, undefined])

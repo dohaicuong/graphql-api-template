@@ -12,7 +12,7 @@ import { schema } from './graphql/schema'
 import { createContext } from './graphql/context'
 
 export const createServer = (opts: FastifyServerOptions = {}) => fastify(opts)
-  // .register(migration)
+  .register(migration)
   .register(cors)
   .register(shutdown)
   .register(prisma)
