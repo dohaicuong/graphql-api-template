@@ -4,11 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "postinstall": "npx prisma generate && npx prisma db push",
     "prismix": "npx prismix && prisma format",
-    "migrate": "npx prisma db push",
-    "generate": "npx prisma generate",
-    "dev": "tsnd --transpile-only --no-notify src/index.ts",
-    "build": "npx prisma generate && npx prisma db push"
+    "dev": "tsnd --transpile-only --no-notify src/index.ts"
   },
   "dependencies": {
     "@prisma/client": "3.11.1",
