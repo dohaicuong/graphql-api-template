@@ -8,7 +8,7 @@ export const migration: FastifyPluginAsync = fp(async (server, options) => {
     const [code, message] = await new Promise((resolve, _) => {
       execFile(
         path.resolve('./node_modules/prisma/build/index.js'),
-        ['db', 'push'],
+        ['db', 'push', '--schema', path.resolve('./prisma/schema.prisma')],
         (error, stdout, stderr) => {
           server.log.info(stdout)
           if (error === null) return resolve([0, undefined])
