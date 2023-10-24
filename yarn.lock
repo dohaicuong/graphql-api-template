@@ -363,7 +363,14 @@
   resolved "https://registry.yarnpkg.com/@types/ms/-/ms-0.7.31.tgz#31b7ca6407128a3d2bbc27fe2d21b345397f6197"
   integrity sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==
 
-"@types/node@*", "@types/node@^17.0.23":
+"@types/node@*":
+  version "20.8.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.8.8.tgz#adee050b422061ad5255fc38ff71b2bb96ea2a0e"
+  integrity sha512-YRsdVxq6OaLfmR9Hy816IMp33xOBjfyOgUd77ehqg96CFywxAPbDbXvAsuN2KVg2HOT8Eh6uAfU+l4WffwPVrQ==
+  dependencies:
+    undici-types "~5.25.1"
+
+"@types/node@^17.0.23":
   version "17.0.23"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-17.0.23.tgz#3b41a6e643589ac6442bdbd7a4a3ded62f33f7da"
   integrity sha512-UxDxWn7dl97rKVeVS61vErvw086aCYhDLyvRQZ5Rk65rZKepaFdm53GeqXaKBuOhED4e9uWq34IC3TdSdJJ2Gw==
@@ -395,18 +402,18 @@
   dependencies:
     "@types/node" "*"
 
-"@vercel/node-bridge@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@vercel/node-bridge/-/node-bridge-2.2.0.tgz#9f77e68733d782bb6edd1e86c2d2eae8e4ca7a3c"
-  integrity sha512-ydYlZyIQfsuriF6qTt/F4vaAt+nb4ZKhLEl2o5AQFa5ED7LoPS5w01Xbujy+25pqS1ODu8/bsqOCUSX8y/+tSQ==
+"@vercel/node-bridge@2.2.2":
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/@vercel/node-bridge/-/node-bridge-2.2.2.tgz#f63466ab6a2588afdc6262c2d060289bfe8baa6b"
+  integrity sha512-haGBC8noyA5BfjCRXRH+VIkHCDVW5iD5UX24P2nOdilwUxI4qWsattS/co8QBGq64XsNLRAMdM5pQUE3zxkF9Q==
 
 "@vercel/node@^1.14.0":
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-1.14.0.tgz#93307fbb99950a3a1caf1183b815c50ee64e6e1a"
-  integrity sha512-UAb1qQMeTkSXz95yljJpz0MyTzcj++B/1XR0vKFZOs2CEfSkBO1DjzX6BkaKriaihBdbGM/X9UoMJfWfUBBn8Q==
+  version "1.15.4"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-1.15.4.tgz#dd55b510492158873c773017ecd3d2bf75f67258"
+  integrity sha512-45fV7qVVw1cWCD6tWBXH0i4pSfYck4yF2qNKlJb1gmbO9JHWRqMYm0uxNWISD6E6Z69Pl1KDvfa+l48w/qEkaw==
   dependencies:
     "@types/node" "*"
-    "@vercel/node-bridge" "2.2.0"
+    "@vercel/node-bridge" "2.2.2"
     ts-node "8.9.1"
     typescript "4.3.4"
 
@@ -3125,6 +3132,11 @@ unbox-primitive@^1.0.1:
     has-bigints "^1.0.1"
     has-symbols "^1.0.2"
     which-boxed-primitive "^1.0.2"
+
+undici-types@~5.25.1:
+  version "5.25.3"
+  resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-5.25.3.tgz#e044115914c85f0bcbb229f346ab739f064998c3"
+  integrity sha512-Ga1jfYwRn7+cP9v8auvEXN1rX3sWqlayd4HP7OKk4mZWylEmu3KzXDUGrQUN6Ol7qo1gPvB2e5gX6udnyEPgdA==
 
 undici@3.3.6:
   version "3.3.6"
